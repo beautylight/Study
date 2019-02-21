@@ -1,8 +1,8 @@
-#Let's Flutter
+# Let's Flutter
 
 
 Alert Dialog
-~~~dart
+~~~
     return AlertDialog(
       title: new Text("Alert Dialog title"),
       content: new Text("Alert Dialog body"),
