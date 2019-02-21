@@ -1,4 +1,6 @@
 2019.02.21
+---------
+
 % 1번째 삽질
 1. local 저장소를 만듦
 2. repository를 만듦
@@ -6,6 +8,7 @@
 4. repository를 만들 때 readme.md를 만들었고, local 저장소를 만들 때study_flutter 파일을 만들었더니 conflict 발생한거였음. pull할 때 history 어쩌고 하는 오류
 5. history 무시하는 옵션 넣어서 pull, readme.md 파일이 local로 땡겨짐
 6. push.
+
 
 % 2번 째 삽질
 1. md 파일을 intellij에서 열려고 함
