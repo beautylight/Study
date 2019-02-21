@@ -1,50 +1,7 @@
 #Let's Flutter
 
-###Index
 
-[AlertDialog](###alert-dialog)  
-[Stack](#stack-program)
-
-~~~
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-~~~
-
-
-###Alert Dialog
+Alert Dialog
 ~~~dart
     return AlertDialog(
       title: new Text("Alert Dialog title"),
@@ -60,7 +17,3 @@
       ],
     );
 ~~~
-
-#Stack Program
-
-hihi
