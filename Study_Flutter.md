@@ -1,5 +1,4 @@
 # Let's Flutter
-
 ###Index
 [AlertDialog](#alert-dialog) 
 ~~~
@@ -43,7 +42,7 @@
 
 
 
-Alert Dialog
+###Alert Dialog
 ~~~
     return AlertDialog(
       title: new Text("Alert Dialog title"),
