@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Study.iml" filepath="$PROJECT_DIR$/.idea/Study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/block_pattern_example/bloc_pattern_example.iml" filepath="$PROJECT_DIR$/block_pattern_example/bloc_pattern_example.iml" />
     </modules>
   </component>
 </project>

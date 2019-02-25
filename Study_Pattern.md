@@ -142,7 +142,7 @@ class _BlocProviderState<T> extends State<BlocProvider<BlocBase>>{
 
 ~~~
 
-
+ 
 - EX) 로그인 상태 관리
 
     - 일반 : 메인페이지 -> 로딩 -> 로그인 확인 후, 로그인 화면 or 메인 화면
@@ -156,5 +156,27 @@ class _BlocProviderState<T> extends State<BlocProvider<BlocBase>>{
 ---
 ### Redux Pattern  
 
-- Redux를 설명하기위해서는 MVC와 FLUX 패턴에 대한 설명이 필요하다.  
-![MVC 패턴](Images/Patterns/MVC.png){: width="100%" height="60%"}
+- Redux를 설명하기위해서는 MVC와 FLUX 패턴에 대한 설명이 필요하다. 
+
+---  
+##### MVC Pattern   
+![MVC 패턴](Images/Patterns/MVC.png)  
+- MVC 모델에서는 1개의 controller가 여러 모델들을 관리하는데,
+큰 프로그램의 경우 다수의 컨트롤러와 뷰에 의해 수정이 되기 때문에 데이터의 흐름이 직관적이지 않다.
+
+##### FLUX Pattern
+![Flux 패턴](Images/Patterns/FLUX.png) 
+- FLUX 패턴에서는 데이터의 수정이 dispatcher 한 곳에서만
+가능하도록 제약을 가했다.
+
+---
+- 다시 Redux로 돌아오면, Redux 패턴은 Flux 패턴에 더해 store 또한 하나만 존재한다는 제약을 추가한 것이다.
+
+##### Redux의 3가지 원칙
+- store는 하나만 존재한다.
+- store의 state는 오직 action을 통해서만 변경할 수 있다. (읽기 전용이다)
+- reducer는 pure function이다. (같은 input -> 같은 output)
+
+##### 사용
+- 어플리케이션의 여러 곳에서 공유되는 데이터
+- 다른 페이지를 갔다 올 때 상태를 유지해야 하는 데이터
