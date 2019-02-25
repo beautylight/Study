@@ -1,7 +1,8 @@
-#Design Pattern
+# Design Pattern
 
-##index
-[BLoC Pattern](#BLoC-Pattern)
+## index  
+
+[BLoC Pattern](#BLoC-Pattern)  
 [Redux Pattern](#Redux-Pattern)
 
 ---
@@ -156,4 +157,4 @@ class _BlocProviderState<T> extends State<BlocProvider<BlocBase>>{
 ### Redux Pattern  
 
 - Redux를 설명하기위해서는 MVC와 FLUX 패턴에 대한 설명이 필요하다.  
-![MVC 패턴](Images/Patterns/MVC.png){: width="100%" heigh="60%"}
+![MVC 패턴](Images/Patterns/MVC.png){: width="100%" height="60%"}
