@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
-import 'package:block_pattern_example/counter_event.dart';
-import 'package:block_pattern_example/counter_state.dart';
+import 'package:block_pattern_example/bloc_example1/counter_event.dart';
+import 'package:block_pattern_example/bloc_example1/counter_state.dart';
 
 class CounterBloc extends Bloc<CounterEvent, CounterState> {
   void onIncrement() {

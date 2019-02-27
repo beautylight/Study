@@ -1,5 +1,5 @@
-import 'package:block_pattern_example/counter_bloc.dart';
-import 'package:block_pattern_example/counter_state.dart';
+import 'package:block_pattern_example/bloc_example1/counter_bloc.dart';
+import 'package:block_pattern_example/bloc_example1/counter_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
