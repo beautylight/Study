@@ -1,14 +1,20 @@
 # Let's Flutter 
 ## index
 ##### Widgets
+[잡다한 내용들](#잡다한-내용들)    
 [Alert Dialog](#alert-dialog)  
 [Show Dialog](#show-dialog)  
 [Future](#futre)  
 [of method](#of-method)
+[TextFormField](#textformfield)  
+[Testing](#testing)  
 ##### Terms
 
 ----
-
+#### 잡다한 내용들  
+- Appbar는 context에 따라서 route가 아닌 경우 자동으로 back button을 생성하는 것 같다.
+- Appbar 사이즈 조절은 PreferredSize 이용
+- TextFormField의 Border를 설정할 때에는 InputDecoration의 enabled, focused Border 파라미터를 손대야 한다.
 #### Alert Dialog
 ~~~dart
     return AlertDialog(
@@ -185,3 +191,74 @@ Widget build(BuildContext context) {
 }
 ~~~
 - 이유 : the context argument to the build function can't be used to find the Theme (since it's "above" the widget being returned)
+
+----  
+
+#### TextFormField  
+
+- Form 과 함께 쓰인다
+- Form의 key를 통해서 TextFormField의 state를 확인할 수 있다.
+
+~~~dart
+
+final formKey = GlobalKey<FormState>() ; //key 선언
+/*
+class ....
+ */
+  Form(
+      key: formKey,
+      child: TextFormField(
+                 validator: (str) => str.isEmpty ? '제목을 입력해주세요!' : null,
+                 //validator를 통해 text로 입력받은 값을 validation 한다. 
+                 //반환 값이 null이 아닌 경우 border가 빨간색으로 칠해지면서 입력칸 하단에 '제목을 입력해주세요!' 라고 나온다
+                 onSaved: (str) {
+                  // text form field에 입력된 값이 str로 들어온다.
+                 }
+                 //어딘가에서 key를 가지고 save를 시키는 경우 실행된다.
+                 //아래 validate method 참고
+            ),
+  )
+  /*
+  ....
+   */
+  
+  // 완료버튼이 눌리면 validate method 실행
+  FlatButton(
+      child: Text(
+          '완료',
+      ),
+      onPressed: (){
+        validate(context) ;
+      },
+  )
+  
+  //validate에서 우리가 Form에 사용했던 formKey를 이용해
+  void validate(context){
+      final form = formKey.currentState ;
+      if(form.validate()){
+        form.save() ; 
+        //formKey가 key로 적용되어 있는 Form 내부의 FormField들이 onSaved
+      }
+    }
+
+~~~  
+
+----
+
+#### Testing  
+
+- 3가지 종류가 있다. Unit tests, Widget tests, Integration tests [참고](https://flutter.dev/docs/testing#unit-tests)
+    - unit tests: single function, method, class 의 작은 단위를 테스트하는 것을 말한다.
+    - widget tests: component test 라고도 불리며 Widget 단위로 테스트하는 것을 말한다.
+    - integration tests: 전체의 어플리케이션 단위의 테스트를 말한다.
+- Flutter Test를 자동으로 해주는 [codemagic](https://codemagic.io/start/) 이라는 사이트도 있다.
+
+##### Widget Test  
+
+- Material App으로 widget을 감싸주지 않으면 Medeia query error가 발생한다.
+~~~
+
+    await tester.pump();
+    // rebuild 되는 것을 보장한다.
+
+~~~
