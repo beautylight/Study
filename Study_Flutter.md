@@ -14,7 +14,16 @@
 #### 잡다한 내용들  
 - Appbar는 context에 따라서 route가 아닌 경우 자동으로 back button을 생성하는 것 같다.
 - Appbar 사이즈 조절은 PreferredSize 이용
-- TextFormField의 Border를 설정할 때에는 InputDecoration의 enabled, focused Border 파라미터를 손대야 한다.
+- TextFormField의 Border를 설정할 때에는 InputDecoration의 enabled, focused Border 파라미터를 손대야 한다.  
+
+- Chat Room  
+    - User간 데이터를 어떻게 주고 받을 수 있지?
+    - string 입력 후 엔터 => user 정보와 함께 네트워크로?
+    - 데이터를 어떤 방식으로 주고 받는 것이 안전할까?
+    - firebase roomInfo document 내부 : 참여 users' id 포함
+    => 현재 채팅방의 정보 검색,
+    - device에 어떻게 채팅 내용을 저장하지?
+
 #### Alert Dialog
 ~~~dart
     return AlertDialog(
